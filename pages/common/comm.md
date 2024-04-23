@@ -22,3 +22,7 @@
 - Print lines only found in second file, when the files aren't sorted:
 
 `comm -13 <(sort {{file1}}) <(sort {{file2}})`
+
+- HELLO FROM GX1
+
+`comm -13 <(sort {{file1}}) <(sort {{file2}})`

@@ -1,0 +1,26 @@
+name: Deploy TLDR Zip to GitHub Pages
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create TLDR Zip
+        run: zip -r tldr.zip *
+
+      - name: Deploy TLDR Zip to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: tldr-assets
+          force_orphan: true
+          clean: true
