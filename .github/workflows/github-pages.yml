@@ -24,3 +24,4 @@ jobs:
           publish_branch: tldr-assets
           force_orphan: true
           clean: true
+          publish_files: tldr.zip
