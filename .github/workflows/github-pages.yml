@@ -3,7 +3,7 @@ name: Deploy TLDR Zip to GitHub Pages
 on:
   push:
     branches:
-      - dev
+      - mytests
 
 jobs:
   build:
